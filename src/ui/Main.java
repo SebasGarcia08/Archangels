@@ -4,13 +4,20 @@ import model.*;
 import java.util.Scanner;
 import static java.lang.System.*;
 
+/**
+ * Declaration of Main class.
+ * This class is encharged of the interaction with the user.
+ * Requests information of the user and uses the validation provided by the controller class. 
+ * @author Sebastián García Acosta
+ * @version 1.2
+ */
 
 public class Main {
     private static MaximaSuperior maxSuperior;
     private static Scanner sc_str, sc_num;
 
     public Main(){
-        this.maxSuperior = new MaximaSuperior(); 
+        maxSuperior = new MaximaSuperior(); 
         sc_str = new Scanner(System.in);
         sc_num = new Scanner(System.in);
     }
@@ -66,6 +73,11 @@ public class Main {
         }
     }
 
+    /**
+     * Request powers to the user and validate them.
+     * <b>post: </b> all the powers returned will meet the conditions specified in the controller class.
+     * @return array of string containing the valid powers that user typed. 
+     */
     public String[] reqPowers(){
         String[] powers = new String[0];
         boolean valid = false;
@@ -82,6 +94,11 @@ public class Main {
         return powers;
     }
 
+    /**
+     * Request name to the user and validate it.
+     * <b>post: </b> all the names registered will meet the conditions specified in the controller class.
+     * @return string containing the valid name that user typed. 
+     */
     public String reqName(){
         String name = "";
         boolean valid = false;
@@ -99,6 +116,10 @@ public class Main {
     }
 
 // RF1
+    /**
+     * Requests the information needed to add a new archangel, displays information about the state of the operation. 
+     *<b>post: </b> all the fields typed meet the conditions specified in the controller class.
+     */
     public void reqInfoAndaddArchangel(){
 //      Archangels attributes
         String name, prayer;
@@ -153,6 +174,11 @@ public class Main {
     }
 
 // RF2 
+    /**
+     * Request the name of the archangel to be searched and invokes the controller's class function to do it.
+     * <b>post: </b> user will have a report about the result of this operation. 
+     * i.e. if the name of Archangel typed by the user was found, displays the results. Otherwise, prints a message.
+     */
     public void findByName(){
         out.print("Write the name you want to search by: ");
         String name = sc_str.nextLine();
@@ -161,6 +187,11 @@ public class Main {
         out.println(res);
     }
 
+    /**
+     * Request the powers of the archangel to be searched and invokes the controller class function to do it.
+     * <b>post: </b> user will have a report about the result of this operation. 
+     * i.e. if the powers typed by the user were found, displays the results. Otherwise, prints a message.
+     */
     public void findByPowers(){
         out.print("Write the powers you want to search by (comma separated): ");
         String[] powers = sc_str.nextLine().split(",");
@@ -168,6 +199,11 @@ public class Main {
         out.println(res);
     }
 
+    /**
+     * Request the number of the month of the archangel to be searched and invokes the controller class function to do it.
+     * <b>post: </b> user will have a report about the result of this operation. 
+     * i.e. if the number of the month typed by the user was found in some archangel, displays the results. Otherwise, prints a message.
+     */
     public void finByMonth(){
         out.print("Type the number of the month you want to search by: ");
         int month = sc_num.nextInt();
@@ -176,6 +212,10 @@ public class Main {
         out.println(res);
     }
 
+    /**
+     * Adds a new power to the archangel specified.
+     * <b>post: </b> there will not exist duplicates powers, since before append it, the information typed by the user is validated.
+     */
     public void createPower(){
         boolean valid = false;
         String name = "";

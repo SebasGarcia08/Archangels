@@ -1,5 +1,9 @@
 package model;
 
+/**
+ * This class defines the attributes of candle object, that has an assignment relationship with Archangel class. 
+ */
+
 public class SpecialCandle{
     private String color;
     private String size;

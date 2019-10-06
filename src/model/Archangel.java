@@ -2,6 +2,10 @@ package model;
 
 import java.util.Arrays;
 
+/**
+ * This class defines the attributes and methods for the Archangel object.
+ */
+
 public class Archangel {
     public static final String NAME_SUFFIX = "el";
 

@@ -3,11 +3,17 @@ package model;
 import java.util.Arrays;
 import java.util.Calendar;
 
+/**
+* This class contains all the bussines-logic of the problem to be tackled; 
+* this is the controller class that provides all the functionalities to be used in the ui package.
+* In the problem tackled, this class contains the array of archangels and the methods for navigating through it.
+*/
+
 public class MaximaSuperior{
-    
+    // Delcare the array of archangels as static and private, since it ensures that only this class will have direct access to it. 
     private static Archangel[] archangels;
-    private int num_of_archs;
-    public static String message = "";
+    private int num_of_archs; // number of archangels
+    public static String message = ""; // "global" variable that will be updated with every change. It can be accessed by the Main class in order to check the reports and desplay them.
 
     public static final int february_num_days = (Calendar.getInstance().get(Calendar.YEAR) % 4 == 0) ? 29 : 28;
     public static final String[] months = {"januray", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"};
