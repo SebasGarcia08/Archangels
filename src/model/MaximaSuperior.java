@@ -1,7 +1,7 @@
 package model;
 
 import java.util.Arrays;
-import java.util.Calendar;
+// import java.util.Calendar;
 
 /**
 * This class contains all the bussines-logic of the problem to be tackled; 
@@ -15,9 +15,9 @@ public class MaximaSuperior{
     private int num_of_archs; // number of archangels
     public static String message = ""; // "global" variable that will be updated with every change. It can be accessed by the Main class in order to check the reports and desplay them.
 
-    public static final int february_num_days = (Calendar.getInstance().get(Calendar.YEAR) % 4 == 0) ? 29 : 28;
+    // public static final int february_num_days = (Calendar.getInstance().get(Calendar.YEAR) % 4 == 0) ? 29 : 28;
     public static final String[] months = {"januray", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"};
-    public static final int[] num_days_per_month = {31, february_num_days, 30, 31, 30, 31, 30, 31, 30, 31, 30, 31};
+    public static final int[] num_days_per_month = {31, 29, 30, 31, 30, 31, 30, 31, 30, 31, 30, 31};
     
     // Constructor
     public MaximaSuperior(int num_of_archs) {
@@ -89,8 +89,6 @@ public class MaximaSuperior{
      * @return the String month plus the number day. e.g. "january 12".
      */
     public String date2String(int day, int month){
-        int february_num_days = (Calendar.getInstance().get(Calendar.YEAR) % 4 == 0) ? 29 : 28;
-        String[] months = {"januray", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"};
         return months[month-1] + " " + day;
     }
 

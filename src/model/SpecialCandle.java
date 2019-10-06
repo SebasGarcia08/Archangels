@@ -5,6 +5,10 @@ package model;
  */
 
 public class SpecialCandle{
+    public static final String BIG = "big";
+    public static final String MEDIUM = "medium";
+    public static final String SMALL = "small";
+    
     private String color;
     private String size;
     private String essence;
