@@ -20,14 +20,13 @@ Each archangel has a name (which ends in the syllable "el"), a photo, a prayer, 
 
 ### Functional requirements
 The application must allow:
-<li class="item">
-<ul>Enter the archangels (there is only one archangel per name and there is only one archangel per power)</ul>
-<ul>Count the archangels entered</ul>
-<ul>Display the archangel's information given its name</ul>
-<ul>Display the archangel's information given its power</ul>
-<ul>Display the celebrations to be held given one month (you must show the name of the archangel, the day of the celebration, the color and the essence of your candle)</ul>
-<ul>Display all celebrations: Review each of the created angels and concatenate the response with the date of celebration, like this: name of the angel: date of celebration, name of the angel: date of celebration. Example: Miguel: September 29, Rafael: June 10.</ul>
-</li>
+
+<li class="item">Enter the archangels (there is only one archangel per name and there is only one archangel per power)</ul>
+<li class="item">Count the archangels entered</li>
+<li class="item">Display the archangel's information given its name</li>
+<li class="item">Display the archangel's information given its power</li>
+<li class="item">Display the celebrations to be held given one month (you must show the name of the archangel, the day of the celebration, the color and the essence of your candle)</li>
+<li class="item">Display all celebrations: Review each of the created angels and concatenate the response with the date of celebration, like this: name of the angel: date of celebration, name of the angel: date of celebration. Example: Miguel: September 29, Rafael: June 10.</li>
 
 ## Problem analysis
 ### UML Class diagram
