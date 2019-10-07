@@ -2,12 +2,12 @@
 ## Steps: 
 First, clone this repository with:
 ```
-    git clone https://github.com/SebasGarcia08/Archangels.git
+git clone https://github.com/SebasGarcia08/Archangels.git
 ```
 
-Then, go to the Angels directory and run this console command:
+Then, go to the Archangels directory and run this console command:
 ``` 
-    java -cp ./bin ./src/ui/Main.java
+java -cp ./bin ./src/ui/Main.java
 ``` 
 
 ## Overview
