@@ -55,7 +55,7 @@ public class Main {
                     program.findByPowers();
                     break;
                 case 5: 
-                    program.finByMonth();
+                    program.findByMonth();
                     break;
                 case 6: 
                     out.println(controller.showAllCelebs());
@@ -154,7 +154,7 @@ public class Main {
                         break;
                     }
                     else{
-                        out.println("RESPONSE: " + controller.message + "Try again:");
+                        out.println("RESPONSE: " + controller.message + "Try again: ");
                     }
                 }
                    
@@ -164,12 +164,11 @@ public class Main {
                 out.print("Essence: ");
                 essence = sc_str.nextLine();
                 
-
                 boolean isValidSize = false;
                 String election;
                 char choice;
                 while(!isValidSize){
-                    out.print("Size [b: BIG/ s: small/ m: medium]:");
+                    out.print("Size [b: BIG/ s: small/ m: medium]: ");
                     election = sc_str.nextLine();
                     if(election.length()==1){
                         choice = election.charAt(0);
@@ -187,11 +186,11 @@ public class Main {
                                 isValidSize = true;
                                 break;
                             default:
-                                out.print("RESPONSE: Invalid choice. Try again:");
+                                out.print("RESPONSE: Invalid choice. Try again: ");
                                 break;
                         }
                     } else{
-                        out.println("RESPONSE: Type 'b' for BIG, 'm' for MEDIUM or 's' for SMALL. Try again:");
+                        out.println("RESPONSE: Type 'b' for BIG, 'm' for MEDIUM or 's' for SMALL. Try again: ");
                     }
                 }
                 
@@ -202,7 +201,7 @@ public class Main {
                     brightnessDegIsValid = (brightness_degree >= 0.0 && brightness_degree <= 100.0);
                     out.println( (brightnessDegIsValid) ? "" : "Invalid answer. Try again:");
                 }
-    
+
                 controller.addArchangel(position, name, powers, prayer, celeb_day, celeb_month, color, size, essence, brightness_degree);
                 out.println("RESPONSE: " + controller.message);
         } 
@@ -239,7 +238,7 @@ public class Main {
      * <b>post: </b> user will have a report about the result of this operation. 
      * i.e. if the number of the month typed by the user was found in some archangel, displays the results. Otherwise, prints a message.
      */
-    public void finByMonth(){
+    public void findByMonth(){
         out.print("Type the number of the month you want to search by: ");
         int month = sc_num.nextInt();
         String response = controller.searchCelebsByMonth(month);

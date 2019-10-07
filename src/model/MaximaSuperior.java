@@ -172,23 +172,6 @@ public class MaximaSuperior{
         return total_number_of_archangels;
     }
 
-// RF3
-    /**
-     * Iterates through the array of archangels of this legion; if finds an Archangel that matches the name requested, returns it.
-     * @param name String, name of the archangel searched.
-     * @return Archangel that matches the name passed through parameter if any. Otherwise returns null.   
-     */
-    // public Archangel searchByName(String name){
-    //     boolean found = false;
-    //     Archangel archangel_found = null;
-    //     for(int i = 0; i<  archangels.length && !found; i++){
-    //         if( archangels[i] != null &&  archangels[i].getName().equals(name)){
-    //             found = true;    
-    //             archangel_found =  archangels[i];
-    //         }
-    //     }
-    //     return archangel_found;
-
     // RF4
     /**
      * Iterates over every Archangel and then search if has any of the powers passed as parameter. 
@@ -222,7 +205,12 @@ public class MaximaSuperior{
         String response = "";
         for(Archangel archangel : archangels){
             if(archangel != null && archangel.getCelebrationMonth() == month)
-                response += archangel.toString() + "\n";
+                response += "\nARCHANGEL " + "\n" +
+                            "   name: " + archangel.getName() + "\n" +
+                            "   celebration day: " + archangel.getCelebrationDay() + "\n" +
+                            "   CANDLE:" + "\n" +
+                            "       color: " + archangel.getCandle().getColor() + "\n" +
+                            "       essence: " + archangel.getCandle().getEssence();
         }
         return response;
     }
@@ -249,7 +237,6 @@ public class MaximaSuperior{
      * @param name String, name of the archangel searched.
      * @return position of the Archangel that matches the name passed through parameter if any. Otherwise returns null.   
      */
-
     public int searchIdxByName(String name){
         boolean found = false;
         int idx = -1;
